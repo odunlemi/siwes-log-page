@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #f5f5f5;
+            padding: 40px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .university-name {
+            font-size: 24px;
+            color: #1a237e;
+            margin-bottom: 10px;
+        }
+
+        .report-title {
+            font-size: 28px;
+            color: #1a237e;
+            margin: 20px 0;
+        }
+
+        .student-info {
+            text-align: center;
+            font-size: 16px;
+            color: #111827;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 25px;
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .student-info-div {
+            margin: 4px 0;
+            font-weight: 600;
+        }
+
+        .student-info-div:first-child {
+            font-size: 20px; 
+            color: #1a237e;
+        }
+
+
+        .month {
+            margin: 40px 0;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideUp 0.8s forwards;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .month-title {
+            font-size: 24px;
+            color: #1a237e;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #1a237e;
+        }
+
+        .week {
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .week:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .week-1, .week-5 { background-color: #e1f5fe; }
+        .week-2, .week-6 { background-color: #f3e5f5; }
+        .week-3, .week-7 { background-color: #fff3e0; }
+        .week-4, .week-8 { background-color: #e7f4e8; }
+
+        .week-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #1a237e;
+        }
+
+        .activities {
+            margin-left: 20px;
+            line-height: 1.6;
+        }
+
+        .remarks {
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+            font-style: italic;
+        }
+
+        .monthly-summary {
+            margin: 30px 0;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #1a237e;
+        }
+
+        .summary-section {
+            margin: 15px 0;
+        }
+
+        .summary-title {
+            font-weight: bold;
+            color: #1a237e;
+            margin-bottom: 10px;
+        }
+
+        .personal-comment {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .personal-comment textarea {
+            width: 100%;
+            min-height: 150px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-top: 10px;
+            resize: vertical;
+        }
+
+        @media print {
+            body {
+                padding: 20px;
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .week:hover {
+                transform: none;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="university-name">OBAFEMI AWOLOWO UNIVERSITY, ILE-IFE</div>
+            <div class="report-title">STUDENT INDUSTRIAL WORK EXPERIENCE SCHEME (SIWES) REPORT</div>
+            <div>August 26 - October 19, 2024</div>
+        </div>
+
+        <div class="student-info">
+            <div class="student-info-div">Abiodun Longe</div>
+            <div class="student-info-div">CSC/2019/187</div>
+            <div class="student-info-div">Computer Science & Engineering</div>
+        </div>        
+
+        <!-- First Month -->
+        <div class="month">
+            <h2 class="month-title">Month 1: August 26 - September 25</h2>
+            
+            <!-- Weeks 1-4 content -->
+            <div class="week-1">
+                <div class="week">
+                    <h3 class="week-title">Week 1</h3>
+                    <div class="activities">Introductions</div>
+                    <div class="activities">Registering for classes</div>
+                    <div class="activities">Planning activities</div>
+
+                    <div class="remarks">
+                        The first week was all about getting to know the ministry and understanding the scope of my learning and training for the SIWES period.
+                    </div>
+                </div>
+            </div>
+
+            <div class="week-2">
+                <div class="week">
+                    <h3 class="week-title">Week 2</h3>
+                    <div class="activities">Web development review</div>
+                    <div class="activities">Classes began</div>
+                    <div class="activities">Built webpage components</div>
+
+                    <div class="remarks">
+                        Got started with learning activities in a supportive environment that helped build skills and stay focused.
+                    </div>
+                </div>
+            </div>
+
+            <div class="week-3">
+                <div class="week">
+                    <h3 class="week-title">Week 3</h3>
+                    <div class="activities">Advanced HTML and CSS Training</div>
+                    <div class="activities">JavaScript Fundamentals</div>
+                    <div class="activities">Frontend Mentor Challenge</div>
+
+                    <div class="remarks">
+                        Successfully grasped web development fundamentals through classes and independent coding challenges. Demonstrated growing proficiency in responsive design implementation.
+                    </div>
+                </div>
+            </div>
+
+            <div class="week-4">
+                <div class="week">
+                    <h3 class="week-title">Week 4</h3>
+                    <div class="activities">Advanced Framework Learning </div>
+                    <div class="activities">Component-Based Development</div>
+                    <div class="activities">Practical Interaction Challenges</div>
+
+                    <div class="remarks">
+                        I made significant progress in learning advanced frameworks and component-based development. Through active engagement with practical challenges, I effectively applied my theoretical knowledge. I developed growing confidence in handling complex user interactions and dynamic content, which has enhanced my development skills.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Montly summary -->
+            <div class="monthly-summary">
+                <div class="summary-title">Description of work for the month</div>
+                <div class="summary-section">Engaged in comprehensive web development training program with focus on frontend technologies. Attended regular classes covering HTML5, CSS3, and JavaScript fundamentals. Applied theoretical knowledge through practical implementation of coding challenges from Frontend Mentor platform. Developed multiple responsive web components while learning industry-standard development practices and modern frameworks like React. Gained hands-on experience in problem-solving and debugging through real-world project implementations.</div>
+            </div>
+
+        </div>
+
+        <!-- Second Month -->
+        <div class="month">
+            <h2 class="month-title">Month 2: September 26 - October 19</h2>
+            
+            <!-- Weeks 5-8 content -->
+            <div class="week-5">
+                <div class="week">
+                    <h3 class="week-title">Week 5</h3>
+                    <div class="activities">IT Assessment Meeting</div>
+                    <div class="activities">Basic MySQL Training</div>
+                    <div class="activities">Fundamentals Practice</div>
+
+                    <div class="remarks">
+                        Successfully transitioned to database studies. 
+                            Demonstrated good understanding of fundamental SQL concepts through practical exercises and tutorial completion.
+                    </div>
+                </div>
+            </div>
+
+            <div class="week-6">
+                <div class="week">
+                    <h3 class="week-title">Week 6</h3>
+                    <div class="activities">Intermediate Concepts</div>
+                    <div class="activities">Joins & Unions</div>
+                    <div class="activities">Advanced Functions</div>
+
+                    <div class="remarks">
+                        Made significant progress in intermediate SQL concepts. Successfully applied complex queries and functions to real datasets.
+                    </div>
+                </div>
+            </div>
+
+            <div class="week-7">
+                <div class="week">
+                    <h3 class="week-title">Week 7</h3>
+                    <div class="activities">Advanced SQL Series</div>
+                    <div class="activities">CTEs & Temp Tables</div>
+                    <div class="activities">Stored Procedures</div>
+
+                    <div class="remarks">
+                        Made significant progress in advanced SQL concepts. Successfully implemented complex database solutions using CTEs and stored procedures.
+                    </div>
+                </div>
+            </div>
+
+            <div class="week-8">
+                <div class="week">
+                    <h3 class="week-title">Week 8</h3>
+                    <div class="activities">Data Cleaning Project</div>
+                    <div class="activities">Data Standardization</div>
+                    <div class="activities">Exploratory Data Analysis (EDA) Implementation</div>
+
+                    <div class="remarks">
+                        Successfully completed end-to-end data cleaning and analysis projects utilizing advanced SQL concepts. Demonstrated strong proficiency in data transformation, standardization, and analytical querying through real-world dataset implementation.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Monthly summary -->
+            <div class="monthly-summary">
+                <div class="summary-title">Description of work for the month</div>
+                <div class="summary-section">Underwent comprehensive database management training focusing on MySQL. Started with fundamental concepts including basic SQL queries, database creation, and table management. Progressed through intermediate topics covering joins, subqueries, and aggregation functions. Advanced to complex database concepts including stored procedures, triggers, and query optimization. Successfully applied learned concepts in practical projects - implementing a thorough data cleaning process on a world company layoffs dataset and conducting detailed exploratory data analysis using advanced SQL techniques. Demonstrated proficiency in handling real-world data challenges through the implementation of various SQL concepts from basic to advanced levels.</div>
+            </div>
+
+        </div>
+
+        <div class="personal-comment">
+            <div class="summary-title">Personal Experience and Reflection</div>
+            <textarea placeholder="Share your personal experience, challenges faced, skills acquired, and overall reflection on the industrial training..."></textarea>
+        </div>
+    </div>
+</body>
+</html>
